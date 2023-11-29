@@ -6,8 +6,6 @@ import './App.scss';
 function App() {
   const [greetMsg, setGreetMsg] = createSignal('');
   const [name, setName] = createSignal('');
-  const a = name as unknown as number
-
 
   async function greet() {
     // Learn more about Tauri commands at https://tauri.app/v1/guides/features/command
