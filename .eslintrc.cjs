@@ -6,6 +6,11 @@ module.exports = {
     parserOptions: {
         parser: '@typescript-eslint/parser',
         ecmaVersion: 2020,
+        "ecmaFeatures": {
+            "jsx": true,
+            "modules": true,
+            "experimentalObjectRestSpread": true
+        },
         sourceType: 'module',
         project: './tsconfig.eslint.json',
         tsconfigRootDir: __dirname,
@@ -14,16 +19,17 @@ module.exports = {
         'standard',
         'plugin:sonarjs/recommended',
         'plugin:prettier/recommended',
-        "plugin:solid/recommended"
+        'plugin:solid/recommended'
     ],
     env: {
         node: true,
         browser: true,
         es6: true,
     },
-    plugins: ['@typescript-eslint', 'sonarjs', 'solid'],
+    plugins: ['@typescript-eslint', 'sonarjs', 'solid', 'prettier'],
     rules: {
         'no-var': 'error',
+        'prettier/prettier': ['error', { singleQuote: true, arrowParens: "avoid", "parser": "typescript" }],
         // allow paren-less arrow functions
         'arrow-parens': ['error', 'as-needed'],
         // set maximum line characters
