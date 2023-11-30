@@ -13,7 +13,9 @@
     "lint:css:fix": "stylelint **/*.scss --fix"
   },
   "dependencies": {
-    "@tauri-apps/api": "^1.5.1"
+    "@solidjs/router": "^0.9.1",
+    "@tauri-apps/api": "^1.5.1",
+    "reset-css": "^5.0.2"
   },
   "devDependencies": {
     "@tauri-apps/cli": "^1.5.6",

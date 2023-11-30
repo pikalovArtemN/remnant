@@ -1,7 +1,14 @@
 /* @refresh reload */
+import './assets/styles/index.scss';
+import { Router } from '@solidjs/router'; // 👈 Import the router
 import { render } from 'solid-js/web';
+import MainLayout from './app/modules/mainLayout/MainLayout.tsx';
 
-import './styles.scss';
-import App from './App';
-
-render(() => <App />, document.getElementById('root') as HTMLElement);
+render(
+  () => (
+    <Router>
+      <MainLayout />
+    </Router>
+  ),
+  document.getElementById('root') as HTMLElement,
+);
