@@ -3,6 +3,7 @@ module.exports = {
     globals: {
         defineModel: 'readonly',
     },
+    parser: "@typescript-eslint/parser",
     parserOptions: {
         parser: '@typescript-eslint/parser',
         ecmaVersion: 2020,
